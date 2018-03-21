@@ -3,10 +3,11 @@ package com.lusifer.leeshop.domain;
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
 import java.util.Date;
 
 @Table(name = "tb_order")
-public class TbOrder {
+public class TbOrder implements Serializable {
     /**
      * 订单id
      */

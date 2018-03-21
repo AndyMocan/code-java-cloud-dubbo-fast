@@ -5,10 +5,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
 import java.util.Date;
 
 @Table(name = "tb_item")
-public class TbItem {
+public class TbItem implements Serializable {
     /**
      * 商品id，同时也是商品编号
      */

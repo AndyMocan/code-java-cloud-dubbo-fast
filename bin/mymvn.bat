@@ -19,3 +19,7 @@ cd ..
 cd leeshop-service-admin
 call mvn clean install
 cd ..
+
+cd leeshop-web-admin
+call mvn clean install
+cd ..
