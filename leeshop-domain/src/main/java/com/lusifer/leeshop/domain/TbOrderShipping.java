@@ -1,5 +1,8 @@
 package com.lusifer.leeshop.domain;
 
+import javax.persistence.Column;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.Date;
 
 @Table(name = "tb_order_shipping")
