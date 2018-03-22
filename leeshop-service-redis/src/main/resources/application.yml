@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: leeshop-service-redis
+  redis:
+    database: 0
+    host: 192.168.75.130
+    port: 6379
+    pool:
+      max-idle: 8
+      min-idle: 0
+      max-active: 8
+      max-wait: -1
+
+dubbo:
+  scan:
+    base-packages: com.lusifer.leeshop.service.redis.api
+  application:
+    id: leeshop-service-redis
+    name: leeshop-service-redis
+  protocol:
+    id: dubbo
+    name: dubbo
+  registry:
+    id: zookeeper
+    address: zookeeper://192.168.75.130:2181?backup=192.168.75.130:2182,192.168.75.130:2183

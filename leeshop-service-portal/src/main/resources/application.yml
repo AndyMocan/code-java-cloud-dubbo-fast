@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: leeshop-service-portal
+  datasource:
+    druid:
+      url: jdbc:mysql://192.168.75.130:3306/leeshop?useUnicode=true&characterEncoding=utf-8&useSSL=false
+      username: root
+      password: 123456
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      test-on-borrow: true
+      driver-class-name: com.mysql.jdbc.Driver
+
+mybatis:
+    type-aliases-package: com.lusifer.leeshop.domain
+    mapper-locations: classpath:mapper/*.xml
+
+dubbo:
+  scan:
+    base-packages: com.lusifer.leeshop.service.portal.api
+  application:
+    id: leeshop-service-portal
+    name: leeshop-service-portal
+  protocol:
+    id: dubbo
+    name: dubbo
+  registry:
+    id: zookeeper
+    address: zookeeper://192.168.75.130:2181?backup=192.168.75.130:2182,192.168.75.130:2183

@@ -1,0 +1,21 @@
+server:
+  port: 8101
+
+spring:
+  application:
+    name: leeshop-web-portal
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5
+    encoding: UTF-8
+    content-type: text/html
+
+dubbo:
+  scan:
+    base-packages: com.lusifer.leeshop.web.portal.controller
+  application:
+    id: leeshop-web-portal
+    name: leeshop-web-portal
+  registry:
+    id: zookeeper
+    address: zookeeper://192.168.75.130:2181?backup=192.168.75.130:2182,192.168.75.130:2183
