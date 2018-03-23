@@ -1,0 +1,22 @@
+server:
+  port: 8500
+
+spring:
+  application:
+    name: leeshop-web-api
+
+dubbo:
+  scan:
+    base-packages: com.lusifer.leeshop.web.api.controller
+  application:
+    id: leeshop-web-api
+    name: leeshop-web-api
+  registry:
+    id: zookeeper
+    address: zookeeper://192.168.75.130:2181?backup=192.168.75.130:2182,192.168.75.130:2183
+
+rest:
+  path:
+    api:
+      v1: api/v1
+      v2: api/v2

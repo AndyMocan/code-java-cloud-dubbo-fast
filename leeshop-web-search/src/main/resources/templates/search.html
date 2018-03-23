@@ -1,0 +1,17 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>搜索</title>
+</head>
+<body>
+<form action="/search" method="post">
+    <input type="text" name="query" placeholder="搜索..."/>
+    <input type="submit" value="搜索"/>
+</form>
+
+<ul>
+    <li th:each="searchResult:${searchResults}" th:utext="${searchResult.highlightItemTitle}"></li>
+</ul>
+</body>
+</html>
